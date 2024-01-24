@@ -1,0 +1,51 @@
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+//set path=C:\Program Files\Java\jdk-19\bin
+//set classpath=;.;C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar
+@WebServlet(urlPatterns="/reg")
+public class SixthServlet extends HttpServlet
+{
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response)throws
+		ServletException,IOException
+	{
+		System.out.println("Request Method is of Type :: "+request.getMethod());
+		String userName=request.getParameter("username");
+		String email=request.getParameter("email");
+		String address=request.getParameter("address");
+		String[] courses=request.getParameterValues("course");
+		PrintWriter out=response.getWriter();
+		out.println("<html><head><title>Output</title></head>");
+		out.println("<body>");
+		out.println("<center>");
+		out.println("<h1>Student Registration Details</h1>");
+		out.println("<table border='1'>");
+		out.println("<tr><th>NAME</th><td>"+userName+"</td></tr>");
+		out.println("<tr><th>EMAIL</th><td>"+email+"</td></tr>");
+		out.println("<tr><th>ADDRESS</th><td>"+address+"</td></tr>");
+		out.println("<tr><th>COURSE</th>");
+		String data="";
+		for(String course: courses)
+			data+=course+" ";
+		out.println("<td>"+data+"</td>");
+		out.println("</tr>");
+		out.println("</table>");
+		out.println("</center>");
+		out.println("</body>");
+		out.println("</html>");
+
+	}
+	@Override
+	public void doPost(HttpServletRequest request, HttpServletResponse response)throws
+		ServletException,IOException
+	{
+	
+	}
+
+
+
+}  
+
+	

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Register Page</title>
+ </head>
+ <body>
+ 
+	<center>
+	<h1 style='color:green; text:white; text-align:middle;'>Maru Intelligence Center...
+	</h1><br/>
+  <form method="GET" action="./demo">
+	<table>
+	<tr>
+		<th>Name</th>
+		<td><input type="text" name="username"></input></td>
+	</tr>
+	<tr>
+		<th>Email</th>
+		<td><input type="text" name="email"></input></td>
+	</tr>
+	<tr>
+		<th>Address</th>
+		<td><input type="text" name="address"></input></td>
+	</tr>
+	<tr>
+		<th>Course Details</th>
+		<td>
+			<select name="course" multiple>
+				<option value="CoreJava">CoreJava</option>
+				<option value="AdvancedJava">AdvancedJava</option>
+				<option value="Hibernate">Hibernate</option>
+				<option value="Spring">Spring</option>
+				<option value="SpringBoot">SpringBoot</option>
+				<option value="MicroServices">MicroServices</option>
+			</select>
+		</td>
+	</tr>
+	<th></th>
+	<td>
+	<input type="submit" value="reg"/>
+	</td>
+	<tr>
+	</tr>
+	</table>
+  </form>
+	</center>
+	
+ </body>
+</html>
